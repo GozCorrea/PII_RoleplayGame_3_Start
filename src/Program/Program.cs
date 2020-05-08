@@ -26,6 +26,13 @@ namespace Program
             gimli.Cure();
 
             Console.WriteLine($"Someone cured Gimli. Gimli now has ❤️ {gimli.Health}");
+
+            DarkArcher darkArcher = new DarkArcher("Orc Commander");
+            darkArcher.Pv = 5;
+            DarkBow darkBow = new DarkBow();
+            darkArcher.AddItem(darkBow);
+            darkArcher.ReceiveAttack(gimli.AttackValue);
+            gimli.MorePv(darkArcher.ChechHealth());
         }
     }
 }
