@@ -1,13 +1,10 @@
 using System.Collections.Generic;
 namespace RoleplayGame
 {
-    public class Knight : Hero
+    public class Hero : Character
     {
-        public Knight(string name) : base(name)
+        public Hero(string name) : base(name)
         {
-            this.AddItem(new Sword());
-            this.AddItem(new Armor());
-            this.AddItem(new Shield());
         }
 
         public override int AttackValue => base.AttackValue;
